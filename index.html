@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form id="form" action="/">
+            <h1>Регистрация</h1>
+            <div class="input-control">
+                <label for="name">Имя</label>
+                <input id="name" class="text" name="name" type="text"  oninput="validName()">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="surName">Фамилия</label>
+                <input id="surName" class="text" name="surName" type="text" oninput="validSurname()">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" oninput="validEmail()">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Пароль</label>
+                <input id="password" name="password" type="password" class="password" oninput="validPassword()">
+                <i class="fa-regular fa-eye"></i>
+                <i class="fa-regular fa-eye-slash"></i>
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password2">Подтверждение пароля</label>
+                <input id="password2" name="password2" type="password" class="password" oninput="validPassword2()">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="dateOfBirth">Дата рождения</label>
+                <input id="dateOfBirth" name="dateOfBirth" type="date" oninput="validDateOfBirth()"  min="1900-01-01">
+                <div class="error"></div>
+            </div>
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/ef7b626c97.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
