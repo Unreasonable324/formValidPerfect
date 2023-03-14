@@ -221,6 +221,10 @@ const formValidation = () => {
         alert('Регистрация прошла успешно!')
         inputsValue.forEach(function (inputValue) {
             inputValue.value = ''
+            // inputValue.
+            inputsControl.forEach(function (inputControl) {
+                inputControl.classList.remove('success')
+            })
         })
     }
 }
